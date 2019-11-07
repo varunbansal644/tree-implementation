@@ -1,28 +1,22 @@
 import java.util.*;
-
-
 class PostOrder 
 	{ 
 	    Node root; 
-	  
 	    PostOrder() 
 	    { 
 	        root = null; 
 	    } 
-	   
 	    void printPostorder(Node node) 
 	    { 
 	        if (node == null) 
 	            return; 
 	        printPostorder(node.left);
 	        printPostorder(node.right); 
-	  
 	        System.out.print(node.key + " "); 
 	    } 
-	    
-	    void printPostorder()    {     printPostorder(root);   } 
-	  
-	    // Driver method 
+	    void printPostorder() { 
+	    printPostorder(root);  
+	    } 
 	    public static void main(String[] args) 
 	    { 
 	        PostOrder tree = new PostOrder(); 
@@ -31,14 +25,7 @@ class PostOrder
 	        tree.root.right = new Node(3); 
 	        tree.root.left.left = new Node(4); 
 	        tree.root.left.right = new Node(5); 
-	  
-	        
-	  
 	        System.out.println("\nPostorder traversal of binary tree is "); 
 	        tree.printPostorder(); 
-	  
-	        
 	    }
 	}
-
-
